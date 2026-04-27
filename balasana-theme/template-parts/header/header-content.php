@@ -1,0 +1,5 @@
+<?php declare( strict_types = 1 ); ?>
+<header id="masthead" class="site-header responsive-max-width">
+	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+	<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
+</header><!-- #masthead -->
