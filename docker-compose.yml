@@ -13,6 +13,8 @@ services:
       - wordpress:/var/www/html
     depends_on:
       - db
+    networks:
+      - network
 
   db:
     image: mysql:8.0
@@ -24,7 +26,12 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - network
 
 volumes:
   wordpress:
   db:
+
+networks:
+  network:
